@@ -202,6 +202,7 @@ for base <= max {
 		cnt++ //即将发送的数据报序号+1
 	}
 }//发送数据报
+_,err = conn.Write([]byte("over"))//发送终止信号
 }
 ```
 

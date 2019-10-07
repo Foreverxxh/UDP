@@ -167,8 +167,11 @@ for {
 ​            checkError(err)
 ​            timer.Reset(timesum) //重置定时器
 ​    }
+    if strData[0:4] == "over" {
+        break
+    }//判断是否终止
 }
-
+timer.Stop()//暂停计时器
 }
 ```
 
